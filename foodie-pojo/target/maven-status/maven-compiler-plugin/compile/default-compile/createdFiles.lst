@@ -1,0 +1,12 @@
+org/alanhou/pojo/OrderItems.class
+org/alanhou/pojo/Users.class
+org/alanhou/pojo/ItemsComments.class
+org/alanhou/pojo/Carousel.class
+org/alanhou/pojo/ItemsSpec.class
+org/alanhou/pojo/ItemsParam.class
+org/alanhou/pojo/Items.class
+org/alanhou/pojo/Orders.class
+org/alanhou/pojo/ItemsImg.class
+org/alanhou/pojo/OrderStatus.class
+org/alanhou/pojo/UserAddress.class
+org/alanhou/pojo/Category.class

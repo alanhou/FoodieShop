@@ -1,8 +1,6 @@
-package org.alanhou.serivce.impl;
-import com.fasterxml.jackson.databind.annotation.JsonAppend;
-import org.alanhou.pojo.Stu;
-import org.alanhou.serivce.StuService;
-import org.alanhou.serivce.TestTransService;
+package org.alanhou.service.impl;
+import org.alanhou.service.StuService;
+import org.alanhou.service.TestTransService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

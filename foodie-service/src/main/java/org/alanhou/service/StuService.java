@@ -1,4 +1,4 @@
-package org.alanhou.serivce;
+package org.alanhou.service;
 
 import org.alanhou.pojo.Stu;
 

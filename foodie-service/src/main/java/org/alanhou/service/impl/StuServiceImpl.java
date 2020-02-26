@@ -1,8 +1,8 @@
-package org.alanhou.serivce.impl;
+package org.alanhou.service.impl;
 
 import org.alanhou.mapper.StuMapper;
 import org.alanhou.pojo.Stu;
-import org.alanhou.serivce.StuService;
+import org.alanhou.service.StuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

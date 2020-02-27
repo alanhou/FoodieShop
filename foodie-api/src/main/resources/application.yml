@@ -39,6 +39,8 @@ spring:
 mybatis:
   type-aliases-package: org.alanhou.pojo    # 所有 POJO 类所在包路径
   mapper-locations: classpath:mapper/*.xml  # mapper映射文件
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 ####################################################
 #

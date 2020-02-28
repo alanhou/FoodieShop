@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.alanhou.mapper.CategoryMapperCustom" >
+
+  <resultMap id="myCategoryVO" type="org.alanhou.pojo.vo.CategoryVO">
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="type" property="type" />
+    <result column="fatherId" property="fatherId" />
+
+    <!--
+      collection 标签：用于定义关联的 list 集合类型的封装规则
+      property: 对应三级分类的 list 属性名
+      ofType: 集合的类型，三级分类的 VO
+    -->
+    <collection property="subCatList" ofType="org.alanhou.pojo.vo.SubCategoryVO">
+      <id column="subId" property="subId" />
+      <result column="subName" property="subName" />
+      <result column="subType" property="subType" />
+      <result column="subFatherId" property="subFatherId" />
+    </collection>
+  </resultMap>
+
+  <select id="getSubCatList" resultMap="myCategoryVO" parameterType="int">
+    SELECT
+      f.id as id,
+      f.name as name,
+      f.type as type,
+      f.father_id as fatherId,
+      c.id as subId,
+      c.name as subName,
+      c.type as subType,
+      c.father_id as subFatherId
+    FROM category f LEFT JOIN category c
+    ON f.id = c.father_id
+    WHERE f.father_id = #{rootCatId}
+  </select>
+</mapper>
